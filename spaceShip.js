@@ -17,14 +17,13 @@ class SpaceShip {
         this.topSpeed = topSpeed;
     }
 accelerate(){
-    const {name, topSpeed} = this;
-    console.log(`${name} moving to ${this.topSpeed}`);
+    console.log(`${this.name} moving to ${this.topSpeed}`);
 };
 }
 
 // 2. Call the constructor with a couple ships, 
 // and call accelerate on both of them.
-const imaginationShip = new SpaceShip('Imagination', '163 km/s');
-const libertyShip = new SpaceShip('Liberty', '150 km/s');
-libertyShip.accelerate();
-imaginationShip.accelerate();
+const diamond = new SpaceShip('Diamond', '163 km/s');
+const liberty = new SpaceShip('Liberty', '150 km/s');
+diamond.accelerate();
+liberty.accelerate();
