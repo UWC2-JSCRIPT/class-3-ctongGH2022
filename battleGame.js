@@ -2,25 +2,27 @@
  * Cecilia Tong
  * Homework #3
  * Tuesday 11/1/2022
+ * Battle Game
  */
 
 // 1. Create attack function below.  This will take the following parameters:
 // attackingPlayer, defendingPlayer, baseDamage, variableDamage
-/**
-The function should do the following:
-1. Calculate total damage. This will equal baseDamageplus a random
-integer from 0 to the amount of the variableDamage
-2. Reduce the health property of the defendingPlayer by the
-amount of the calculated damage
-3. Return a string describing the attack, i.e. "Merlin hits
-James Bond for 4 damage"
- */
-function attack1(attackingPlayer, defendingPlayer, baseDamage, variableDamage){
+// The function should do the following:
+// a. Calculate total damage. This will equal baseDamageplus a random
+// integer from 0 to the amount of the variableDamage
+// b. Reduce the health property of the defendingPlayer by the
+// amount of the calculated damage
+// c. Return a string describing the attack, i.e. "Merlin hits
+//James Bond for 4 damage"
+ 
+/*
+function attack(attackingPlayer, defendingPlayer, baseDamage, variableDamage){
   let randomDamage = Math.floor(Math.random() * variableDamage + 1);
   let totalDamage = baseDamage + randomDamage;
   defendingPlayer.health -= totalDamage;
   return console.log(`${attackingPlayer.name} hits ${defendingPlayer.name} for ${totalDamage} damage`);
 }
+*/
 
 // 2. Create player1 and player2 objects below
 // Each should have a name property of your choosing, and health property equal to 10
