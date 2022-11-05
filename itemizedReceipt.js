@@ -28,7 +28,7 @@ function logReceipt(...menuItems){
 ---------------------------------`);
 }
 
-//call function with different params
+//call function with different params to check
 logReceipt(burrito);
 logReceipt(burrito, chip);
 logReceipt(burrito, chip, drink);
