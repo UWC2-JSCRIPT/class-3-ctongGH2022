@@ -18,14 +18,28 @@ const drink = {descr: 'Sprite', price: 1.99};
 
 //function lodReceipt using rest params
 function logReceipt(...menuItems){
-  let totalCost = 0;
-  for (const item of menuItems){
-    totalCost += item.price;
-    console.log(`${item.descr} - $${item.price}\n`);
+  const saleTax = .1; //let sale tax be 10% 
+  let subTotal = 0;  //total before tax
+  let totalTax = 0;  //total tax
+  let totalCost = 0; //total after tax
 
+  //calculate subtotal before tax
+  for (const item of menuItems){
+    subTotal += item.price;
+    console.log(`${item.descr} - $${item.price}\n`);
   }
-  console.log(`Total - $${totalCost}
----------------------------------`);
+  
+  //calculate totalTax 
+  totalTax = subTotal*saleTax;
+  
+  //calculate total cost after tax
+  totalCost = subTotal + totalTax;
+ 
+  //display to console
+  console.log(`Subtotal - $${subTotal.toFixed(2)}`);
+  console.log(`Tax - $${totalTax.toFixed(2)}`);
+  console.log(`Total - $${totalCost.toFixed(2)}`);
+  console.log(`---------------------`);
 }
 
 //call function with different params to check
